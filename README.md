@@ -1,6 +1,6 @@
 <h2>Usage</h2>
 
-<p>Feel to take it. Do whatever you want.</p>
+<p>Feel free to take it and do whatever you want.</p>
 
 <ol>
   <li>Install Jquery 1.11.2 +</li>
