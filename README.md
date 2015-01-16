@@ -1,5 +1,7 @@
 <h2>Usage</h2>
 
+<p>Feel to take it. Do whatever you want.</p>
+
 <ol>
   <li>Install Jquery 1.11.2 +</li>
   <li>Install jquery.checkall.js</li>
