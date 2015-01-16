@@ -2,7 +2,7 @@
 
 <ol>
   <li>Install Jquery 1.11.2 +</li>
-  <li>Install jquery.checkAll.js</li>
+  <li>Install jquery.checkall.js</li>
 </ol>
 
 <code>
