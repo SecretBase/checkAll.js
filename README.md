@@ -1,6 +1,6 @@
 ##Usage
 Feel free to take it and do whatever you want.
-```
+```HTML
 <script type="text/javascript" src="jquery.js"></script>
 <script src="jquery.checkAll.js" type="text/javascript"></script>
 <form action="#">
@@ -22,7 +22,7 @@ By default, The plugin will select closest form element.
 
 You can provide a selector to select specific scope:
 
-```
+```HTML
 <form action="#">
   <fieldset>
       <input type="checkbox" name="" id="" class="check-all">
@@ -53,7 +53,7 @@ You can provide a selector to select specific scope:
 ```
 Also you can provide a Jquery object to select a specific scope
 
-```
+```HTML
 <div class="control-panel">
     <input type="checkbox" name="" id="" class="check-all">
 </div>
@@ -83,7 +83,7 @@ Also you can provide a Jquery object to select a specific scope
 </script>
 ```
 ##Options and Callback
-```
+```HTML
 <script>
     $(".check-all").checkAll({
         scope : $('#categories'),
