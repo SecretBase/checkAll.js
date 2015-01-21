@@ -82,7 +82,7 @@ Also you can provide a Jquery object to select a specific scope
     });
 </script>
 ```
-##Options
+##Options and Callback
 ```
 <script>
     $(".check-all").checkAll({
