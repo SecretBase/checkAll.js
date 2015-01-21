@@ -61,7 +61,9 @@
 	<script>
 
 		$(document).ready(function() {
-			$(".check-all").checkAll('fieldset');
+			$(".check-all").checkAll({
+				scope: 'fieldset'
+			});
 		});
 
 	</script>
