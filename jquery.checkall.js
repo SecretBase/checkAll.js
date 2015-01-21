@@ -4,7 +4,8 @@
     {
         var options = $.extend({
                 scope: 'form',
-                onMasterCheck: null
+                onMasterClick: null,
+                onScopeChange: null
             }, options);
 
         this.each(function() {
@@ -16,13 +17,13 @@
 
                 if ($master_checkbox.is(':checked')) {
 
-                    if (typeof options.onMasterCheck === 'function')
-                        options.onMasterCheck($master_checkbox, $scope);
-
                     $scope.find('input[type="checkbox"]').not($master_checkbox).prop('checked', true);
                 }
                 else
                     $scope.find('input[type="checkbox"]').not($master_checkbox).prop('checked', false);
+
+                if (typeof options.onMasterClick === 'function')
+                        options.onMasterClick($master_checkbox, $scope);
             });
 
             $scope.on('change', 'input[type="checkbox"]', function(e) {
@@ -31,6 +32,9 @@
 
                 if ($changed_checkbox.is($master_checkbox))
                     return false;
+
+                if (typeof options.onScopeChange === 'function')
+                        options.onScopeChange($master_checkbox, $changed_checkbox, $scope);
 
                 if ( ! $changed_checkbox.is(':checked')) {
                     $master_checkbox.prop('checked', false);
