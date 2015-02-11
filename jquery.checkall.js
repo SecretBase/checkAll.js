@@ -41,7 +41,7 @@
                     return;
                 }
 
-                if ($scope.find('input[type="checkbox"]:checked').not($master_checkbox).not(':checked').length == 0)
+                if ($scope.find('input[type="checkbox"]').not($master_checkbox).not(':checked').length == 0)
                     $master_checkbox.prop('checked', true);
             });
 
