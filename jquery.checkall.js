@@ -8,7 +8,7 @@
                 onScopeChange: null
             }, options);
 
-        this.each(function() {
+        return this.each(function() {
 
             var $master_checkbox = $(this),
                 $scope = options.scope instanceof jQuery ? options.scope : $master_checkbox.closest(options.scope);
@@ -16,11 +16,9 @@
             $master_checkbox.on('click', function(e) {
 
                 if ($master_checkbox.is(':checked')) {
-
-                    $scope.find('input[type="checkbox"]').not($master_checkbox).prop('checked', true);
-                }
-                else
-                    $scope.find('input[type="checkbox"]').not($master_checkbox).prop('checked', false);
+                    $scope.find('input[type="checkbox"]').not($master_checkbox).prop('checked', true).trigger('change');
+                } else
+                    $scope.find('input[type="checkbox"]').not($master_checkbox).prop('checked', false).trigger('change');
 
                 if (typeof options.onMasterClick === 'function')
                         options.onMasterClick($master_checkbox, $scope);
@@ -41,11 +39,10 @@
                     return;
                 }
 
-                if ($scope.find('input[type="checkbox"]').not($master_checkbox).not(':checked').length == 0)
+                if ($scope.find('input[type="checkbox"]').not($master_checkbox).not(':checked').length === 0)
                     $master_checkbox.prop('checked', true);
+                
             });
-
-            return this;
         });
     };
     
