@@ -15,9 +15,9 @@
 
             $master_checkbox.on('click', function(e) {
 
-                if ($master_checkbox.is(':checked')) {
+                if ($master_checkbox.is(':checked'))
                     $scope.find('input[type="checkbox"]').not($master_checkbox).prop('checked', true).trigger('change');
-                } else
+                else
                     $scope.find('input[type="checkbox"]').not($master_checkbox).prop('checked', false).trigger('change');
 
                 if (typeof options.onMasterClick === 'function')
@@ -29,7 +29,7 @@
                 var $changed_checkbox = $(this);
 
                 if ($changed_checkbox.is($master_checkbox))
-                    return false;
+                    return;
 
                 if (typeof options.onScopeChange === 'function')
                         options.onScopeChange($master_checkbox, $changed_checkbox, $scope);
