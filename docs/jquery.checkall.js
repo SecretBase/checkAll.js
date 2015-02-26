@@ -1,7 +1,3 @@
-/*
-* Beamstyle checkAll checkbox plugin - Hong
-*
-*/
 ;(function($)
 {
     $.fn.checkAll = function (options)
